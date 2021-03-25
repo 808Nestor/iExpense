@@ -5,16 +5,14 @@
 //  Created by Nestor Trillo on 3/22/21.
 //
 
-
-
 //  LIBRABRIES
 import SwiftUI
 
 struct ExpenseItem: Identifiable, Codable {
 	var id = UUID()
-	let name = String
-	let type = String
-	let amount = Int
+	let name: String
+	let type: String
+	let amount: Int
 }
 
 class Expenses: ObservableObject {
@@ -46,11 +44,11 @@ struct ContentView: View {
 	@State private var showingAddExpense = false
 
 	var body: some View {
-		NavigationView{
-				List{
-					ForEach(expenses.items){ item in
+		NavigationView {
+				List {
+					ForEach(expenses.items) { item in
 						HStack{
-							VStack(alignment: .leading){
+							VStack(alignment: .leading) {
 								Text(item.name)
 									.font(.headline)
 								Text(item.type)
@@ -66,7 +64,7 @@ struct ContentView: View {
 				.navigationBarItems(trailing:
 										Button(action: {
 											self.showingAddExpense = true
-										}){
+										}) {
 											Image(systemName: "plus")
 										}
 				)
@@ -81,7 +79,6 @@ struct ContentView: View {
 		expenses.items.remove(atOffsets: offsets)
 	}
 }
-
 
 //  PREVIEW
 struct ContentView_Preview: PreviewProvider {

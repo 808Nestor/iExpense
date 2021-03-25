@@ -82,7 +82,6 @@
 				6FC926C026096E8200B84C44 /* Sources */,
 				6FC926C126096E8200B84C44 /* Frameworks */,
 				6FC926C226096E8200B84C44 /* Resources */,
-				6FF94AA8260BCFCD00835569 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -136,26 +135,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		6FF94AA8260BCFCD00835569 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		6FC926C026096E8200B84C44 /* Sources */ = {
